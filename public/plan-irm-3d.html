@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan 3D — IRM Mobile T350 14' — Faucon PTR</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a0a;color:#e5e5e5;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden;width:100vw;height:100vh}
+  #c{position:fixed;top:0;left:0;width:100%;height:100%}
+  .panel{position:fixed;top:16px;left:16px;background:rgba(10,10,10,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #262626;border-radius:14px;padding:18px;width:250px;z-index:100;max-height:calc(100vh - 32px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#333 transparent}
+  .panel h1{font-size:17px;font-weight:700}.panel h1 span{color:#f59e0b}
+  .panel .sub{font-size:10px;color:#525252;margin-bottom:14px;letter-spacing:.3px}
+  .sec{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:#404040;margin:14px 0 6px;font-weight:600}
+  .vb{display:inline-block;background:#141414;border:1px solid #262626;border-radius:7px;color:#737373;font-size:10px;padding:5px 10px;margin:2px;cursor:pointer;transition:all .15s;font-family:inherit}
+  .vb:hover{border-color:#f59e0b;color:#f59e0b}.vb.on{background:#f59e0b;color:#0a0a0a;border-color:#f59e0b;font-weight:600}
+  .tr{display:flex;align-items:center;gap:7px;padding:3px 0}
+  .tr input{accent-color:#f59e0b;cursor:pointer}
+  .tr label{font-size:11px;color:#a3a3a3;cursor:pointer}
+  .dot{width:7px;height:7px;border-radius:2px;flex-shrink:0}
+  .sg{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:4px}
+  .si{font-size:9px;color:#525252;padding:3px 0}.si strong{color:#a3a3a3;display:block;font-size:10px}
+  .lk{display:inline-block;margin-top:10px;font-size:10px;color:#f59e0b;text-decoration:none;opacity:.6;transition:opacity .2s}.lk:hover{opacity:1}
+  .ins{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(10,10,10,.75);backdrop-filter:blur(8px);border:1px solid #1a1a1a;border-radius:8px;padding:6px 14px;font-size:10px;color:#404040;z-index:100;white-space:nowrap}
+  .fs{position:fixed;top:16px;right:16px;background:rgba(10,10,10,.88);backdrop-filter:blur(12px);border:1px solid #262626;border-radius:9px;padding:7px 11px;color:#737373;font-size:16px;cursor:pointer;z-index:100;transition:all .15s;line-height:1}.fs:hover{border-color:#f59e0b;color:#f59e0b}
+  .l3{background:rgba(8,8,8,.85);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:3px 8px;font-size:10px;font-weight:600;white-space:nowrap;pointer-events:none;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.4}
+  .l3.c-irm{color:#fbbf24;border-color:rgba(245,158,11,.25)}.l3.c-tbl{color:#c084fc;border-color:rgba(168,85,247,.25)}
+  .l3.c-clr{color:#f87171;border-color:rgba(239,68,68,.25)}.l3.c-cab{color:#60a5fa;border-color:rgba(59,130,246,.25)}
+  .l3.c-sto{color:#34d399;border-color:rgba(16,185,129,.25)}.l3.c-dim{color:#f59e0b;border-color:rgba(245,158,11,.15);font-weight:400;font-size:9px}
+  .l3 .dm{font-size:8px;font-weight:400;opacity:.65;display:block}
+  @media(max-width:640px){.panel{width:200px;padding:12px;font-size:11px}.ins{font-size:9px}}
+</style>
+</head>
+<body>
+
+<div id="c"></div>
+
+<div class="panel">
+  <h1>FAUCON <span>PTR</span></h1>
+  <div class="sub">IRM Mobile — T350 14' — Vue 3D interactive</div>
+  <div class="sec">Vues</div>
+  <div id="vb">
+    <button class="vb on" data-v="persp">Perspective</button>
+    <button class="vb" data-v="top">Dessus</button>
+    <button class="vb" data-v="drv">Conducteur</button>
+    <button class="vb" data-v="pas">Passager</button>
+    <button class="vb" data-v="rear">Arrière</button>
+    <button class="vb" data-v="front">Avant</button>
+  </div>
+  <div class="sec">Éléments</div>
+  <div class="tr"><input type="checkbox" id="t-irm" checked><div class="dot" style="background:#f59e0b"></div><label for="t-irm">IRM (1.0×0.82×1.50m)</label></div>
+  <div class="tr"><input type="checkbox" id="t-tbl" checked><div class="dot" style="background:#a855f7"></div><label for="t-tbl">Table patient (1.82×0.75m)</label></div>
+  <div class="tr"><input type="checkbox" id="t-clr" checked><div class="dot" style="background:#ef4444"></div><label for="t-clr">Zone dégagement 90°/1m</label></div>
+  <div class="tr"><input type="checkbox" id="t-cab" checked><div class="dot" style="background:#3b82f6"></div><label for="t-cab">Armoire électrique 30"³</label></div>
+  <div class="tr"><input type="checkbox" id="t-sto" checked><div class="dot" style="background:#10b981"></div><label for="t-sto">Rangement</label></div>
+  <div class="tr"><input type="checkbox" id="t-lbl" checked><label for="t-lbl">Labels</label></div>
+  <div class="tr"><input type="checkbox" id="t-wal" checked><label for="t-wal">Parois du camion</label></div>
+  <div class="sec">Véhicule</div>
+  <div class="sg">
+    <div class="si"><strong>Longueur</strong>4.00 m</div>
+    <div class="si"><strong>Largeur</strong>2.045 m</div>
+    <div class="si"><strong>Hauteur</strong>1.98 m</div>
+    <div class="si"><strong>Dégagement</strong>1.0 m / 90°</div>
+  </div>
+  <a href="plan-irm.html" class="lk">← Plan 2D technique</a>
+</div>
+
+<div class="ins">Clic gauche : rotation · Molette : zoom · Clic droit : déplacer</div>
+<button class="fs" id="fs" title="Plein écran">⛶</button>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"}}</script>
+<script type="module">
+import*as T from'three';
+import{OrbitControls}from'three/addons/controls/OrbitControls.js';
+import{CSS2DRenderer,CSS2DObject}from'three/addons/renderers/CSS2DRenderer.js';
+
+/* ── Constants ── */
+const TK={L:4,W:2.045,H:1.98};
+const IR={L:1,W:.82,H:1.5};
+const TB={L:1.82,W:.75,TH:.05,EL:.75};
+const CB={S:.762};
+const ST={L:.6,W:.5,H:.8};
+const CR=1;
+
+/* ── Scene ── */
+const scene=new T.Scene();
+scene.background=new T.Color(0x080808);
+scene.fog=new T.FogExp2(0x080808,.035);
+
+const cam=new T.PerspectiveCamera(42,innerWidth/innerHeight,.1,80);
+const tgt=new T.Vector3(TK.W/2,TK.H*.35,TK.L/2);
+const startPos=new T.Vector3(9,7,11);
+const endPos=new T.Vector3(4.5,2.8,6);
+cam.position.copy(startPos);
+
+/* ── Renderers ── */
+const r=new T.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+r.setSize(innerWidth,innerHeight);
+r.setPixelRatio(Math.min(devicePixelRatio,2));
+r.shadowMap.enabled=true;
+r.shadowMap.type=T.PCFSoftShadowMap;
+r.toneMapping=T.ACESFilmicToneMapping;
+r.toneMappingExposure=1.1;
+document.getElementById('c').appendChild(r.domElement);
+
+const lr=new CSS2DRenderer();
+lr.setSize(innerWidth,innerHeight);
+lr.domElement.style.position='absolute';
+lr.domElement.style.top='0';
+lr.domElement.style.pointerEvents='none';
+document.getElementById('c').appendChild(lr.domElement);
+
+/* ── Controls ── */
+const ctl=new OrbitControls(cam,r.domElement);
+ctl.target.copy(tgt);
+ctl.enableDamping=true;
+ctl.dampingFactor=.06;
+ctl.minDistance=1.5;
+ctl.maxDistance=18;
+ctl.maxPolarAngle=Math.PI*.48;
+ctl.update();
+
+/* ── Lights ── */
+scene.add(new T.AmbientLight(0x334,0.8));
+scene.add(new T.HemisphereLight(0x7788bb,0x332211,.5));
+
+const dl=new T.DirectionalLight(0xfff8ee,1.5);
+dl.position.set(6,10,4);dl.castShadow=true;
+dl.shadow.mapSize.set(2048,2048);
+dl.shadow.camera.left=-8;dl.shadow.camera.right=8;
+dl.shadow.camera.top=8;dl.shadow.camera.bottom=-8;
+dl.shadow.bias=-.0002;
+scene.add(dl);
+
+const pl=new T.PointLight(0xfff0d0,.6,8);
+pl.position.set(TK.W/2,TK.H-.1,TK.L/2);scene.add(pl);
+
+const pl2=new T.PointLight(0xeef0ff,.3,5);
+pl2.position.set(TK.W/2,.3,TK.L-.5);scene.add(pl2);
+
+/* ── Ground ── */
+const gnd=new T.Mesh(new T.PlaneGeometry(30,30),new T.MeshStandardMaterial({color:0x0a0a0a,roughness:.95}));
+gnd.rotation.x=-Math.PI/2;gnd.position.y=-.005;gnd.receiveShadow=true;scene.add(gnd);
+const gh=new T.GridHelper(30,60,0x151515,0x111111);gh.position.y=.001;scene.add(gh);
+
+/* ── Groups ── */
+const G={irm:new T.Group(),tbl:new T.Group(),clr:new T.Group(),cab:new T.Group(),sto:new T.Group(),wal:new T.Group(),lbl:new T.Group()};
+Object.values(G).forEach(g=>scene.add(g));
+
+/* ── Helpers ── */
+function box(w,h,d,col,met=.4,rou=.4){
+  const m=new T.Mesh(new T.BoxGeometry(w,h,d),new T.MeshStandardMaterial({color:col,metalness:met,roughness:rou}));
+  m.castShadow=true;m.receiveShadow=true;
+  const e=new T.LineSegments(new T.EdgesGeometry(m.geometry),new T.LineBasicMaterial({color:new T.Color(col).lerp(new T.Color(0xffffff),.35),transparent:true,opacity:.25}));
+  m.add(e);return m;
+}
+function lbl(txt,dim,cls){
+  const d=document.createElement('div');d.className='l3 c-'+cls;
+  d.innerHTML=txt+(dim?'<span class="dm">'+dim+'</span>':'');
+  return new CSS2DObject(d);
+}
+
+/* ══════════════════════════════════ */
+/* ── TRUCK WALLS ── */
+/* ══════════════════════════════════ */
+const wm=new T.MeshPhysicalMaterial({color:0xaabbcc,transparent:true,opacity:.04,side:T.DoubleSide,depthWrite:false,roughness:.2,metalness:.1});
+
+// Floor (inside truck, subtle reflection)
+const tf=new T.Mesh(new T.PlaneGeometry(TK.W,TK.L),new T.MeshStandardMaterial({color:0x151515,roughness:.4,metalness:.3}));
+tf.rotation.x=-Math.PI/2;tf.position.set(TK.W/2,.002,TK.L/2);tf.receiveShadow=true;G.wal.add(tf);
+
+// Interior grid
+const ig=new T.GridHelper(4,16,0x252525,0x1a1a1a);
+ig.position.set(TK.W/2,.003,TK.L/2);G.wal.add(ig);
+
+// Ceiling
+const tc=new T.Mesh(new T.PlaneGeometry(TK.W,TK.L),wm.clone());
+tc.rotation.x=Math.PI/2;tc.position.set(TK.W/2,TK.H,TK.L/2);G.wal.add(tc);
+
+// Side walls
+const sg=new T.PlaneGeometry(TK.L,TK.H);
+[0,TK.W].forEach((x,i)=>{const w=new T.Mesh(sg.clone(),wm.clone());w.rotation.y=i?-Math.PI/2:Math.PI/2;w.position.set(x,TK.H/2,TK.L/2);G.wal.add(w)});
+
+// Front wall
+const fw=new T.Mesh(new T.PlaneGeometry(TK.W,TK.H),wm.clone());
+fw.position.set(TK.W/2,TK.H/2,0);G.wal.add(fw);
+
+// Rear wall (with door opening — only side pillars)
+[.15,TK.W-.15].forEach(x=>{const p=new T.Mesh(new T.BoxGeometry(.08,TK.H,.08),new T.MeshStandardMaterial({color:0x404040,metalness:.6,roughness:.4}));p.position.set(x,TK.H/2,TK.L);p.castShadow=true;G.wal.add(p)});
+// Top beam
+const tb2=new T.Mesh(new T.BoxGeometry(TK.W-.22,.08,.08),new T.MeshStandardMaterial({color:0x404040,metalness:.6,roughness:.4}));
+tb2.position.set(TK.W/2,TK.H-.04,TK.L);G.wal.add(tb2);
+
+// Wireframe
+const bx=new T.LineSegments(new T.EdgesGeometry(new T.BoxGeometry(TK.W,TK.H,TK.L)),new T.LineBasicMaterial({color:0x404040}));
+bx.position.set(TK.W/2,TK.H/2,TK.L/2);G.wal.add(bx);
+
+// Cab (simple representation)
+const cabBody=new T.Mesh(new T.BoxGeometry(TK.W+.15,1.4,1.3),new T.MeshStandardMaterial({color:0x1a1a1a,roughness:.7,metalness:.4}));
+cabBody.position.set(TK.W/2,.7,-.65);cabBody.castShadow=true;G.wal.add(cabBody);
+const cabEdge=new T.LineSegments(new T.EdgesGeometry(cabBody.geometry),new T.LineBasicMaterial({color:0x333333}));
+cabBody.add(cabEdge);
+
+// Wheels (simplified)
+const wg=new T.CylinderGeometry(.32,.32,.18,16);
+const wmt=new T.MeshStandardMaterial({color:0x111111,roughness:.9,metalness:.2});
+[[-.15,.32,-.5],[TK.W+.15,.32,-.5],[-.15,.32,TK.L-.3],[TK.W+.15,.32,TK.L-.3]].forEach(([x,y,z])=>{
+  const w=new T.Mesh(wg,wmt);w.rotation.z=Math.PI/2;w.position.set(x,y,z);w.castShadow=true;G.wal.add(w);
+});
+
+/* ══════════════════════════════════ */
+/* ── IRM ── */
+/* ══════════════════════════════════ */
+const irm=box(IR.W,IR.H,IR.L,0xd4860a,.65,.2);
+irm.position.set(IR.W/2,IR.H/2,IR.L/2);G.irm.add(irm);
+
+// Bore tunnel
+const bore=new T.Mesh(new T.CylinderGeometry(.27,.27,IR.L+.04,32,1,true),new T.MeshStandardMaterial({color:0x0d0d0d,side:T.BackSide,roughness:.95}));
+bore.rotation.x=Math.PI/2;bore.position.set(IR.W/2,IR.H/2,IR.L/2);G.irm.add(bore);
+
+// Bore ring glow
+const ring=new T.Mesh(new T.TorusGeometry(.27,.025,12,48),new T.MeshStandardMaterial({color:0xf59e0b,emissive:0xf59e0b,emissiveIntensity:.5,metalness:.9,roughness:.1}));
+ring.position.set(IR.W/2,IR.H/2,IR.L);G.irm.add(ring);
+
+// Subtle outer glow ring
+const glow=new T.Mesh(new T.TorusGeometry(.27,.06,8,48),new T.MeshStandardMaterial({color:0xf59e0b,transparent:true,opacity:.08,side:T.DoubleSide}));
+glow.position.copy(ring.position);G.irm.add(glow);
+
+// Small "console intégrée" panel on top
+const cp=new T.Mesh(new T.BoxGeometry(.3,.02,.2),new T.MeshStandardMaterial({color:0x1a1a1a,emissive:0x223344,emissiveIntensity:.3,metalness:.8,roughness:.2}));
+cp.position.set(IR.W/2,IR.H+.01,IR.L*.3);G.irm.add(cp);
+
+const irmL=lbl('IRM','1.0 × 0.82 × 1.50m — Console int.','irm');
+irmL.position.set(IR.W/2,IR.H+.2,IR.L/2);G.lbl.add(irmL);
+
+/* ══════════════════════════════════ */
+/* ── TABLE PATIENT ── */
+/* ══════════════════════════════════ */
+const tbl=box(TB.W,TB.TH,TB.L,0x8b5cf6,.15,.6);
+tbl.position.set(IR.W/2,TB.EL,IR.L+TB.L/2);G.tbl.add(tbl);
+
+// Padded surface
+const pad=new T.Mesh(new T.BoxGeometry(TB.W-.04,.03,TB.L-.06),new T.MeshStandardMaterial({color:0x6d28d9,roughness:.9,metalness:0}));
+pad.position.set(IR.W/2,TB.EL+.04,IR.L+TB.L/2);G.tbl.add(pad);
+
+// Legs
+const lg=new T.CylinderGeometry(.018,.018,TB.EL-TB.TH/2,8);
+const lm=new T.MeshStandardMaterial({color:0x555555,metalness:.85,roughness:.2});
+[[.32,.08],[.32,TB.L-.08],[-.32,.08],[-.32,TB.L-.08]].forEach(([dx,dz])=>{
+  const l=new T.Mesh(lg,lm);l.position.set(IR.W/2+dx,(TB.EL-TB.TH/2)/2,IR.L+dz);l.castShadow=true;G.tbl.add(l);
+});
+
+// Side rails
+const rl=new T.BoxGeometry(.03,.025,TB.L+.4);
+const rm=new T.MeshStandardMaterial({color:0x777777,metalness:.9,roughness:.15});
+[-1,1].forEach(s=>{const r2=new T.Mesh(rl,rm);r2.position.set(IR.W/2+s*(TB.W/2+.025),TB.EL-.03,IR.L+TB.L/2-.15);G.tbl.add(r2)});
+
+const tblL=lbl('Table patient','1.82 × 0.75m','tbl');
+tblL.position.set(IR.W/2,TB.EL+.35,IR.L+TB.L/2);G.lbl.add(tblL);
+
+/* ══════════════════════════════════ */
+/* ── 90° CLEARANCE ZONE ── */
+/* ══════════════════════════════════ */
+const cx=IR.W,cz=IR.L; // Corner of IRM
+
+// Quarter cylinder (transparent red)
+const cg=new T.CylinderGeometry(CR,CR,TK.H,64,1,false,0,Math.PI/2);
+const cm=new T.MeshStandardMaterial({color:0xef4444,transparent:true,opacity:.05,side:T.DoubleSide,depthWrite:false});
+const clr=new T.Mesh(cg,cm);
+clr.position.set(cx,TK.H/2,cz);G.clr.add(clr);
+
+// Floor arc + radii
+const ap=[];const ns=64;
+for(let i=0;i<=ns;i++){const th=i/ns*Math.PI/2;ap.push(cx+CR*Math.sin(th),.012,cz+CR*Math.cos(th))}
+ap.push(cx,.012,cz, cx,.012,cz+CR);
+const ag=new T.BufferGeometry();ag.setAttribute('position',new T.Float32BufferAttribute(ap,3));
+const al=new T.Line(ag,new T.LineDashedMaterial({color:0xef4444,dashSize:.06,gapSize:.04,transparent:true,opacity:.55}));
+al.computeLineDistances();G.clr.add(al);
+
+// Same at ceiling
+const al2=al.clone();al2.position.y=TK.H-.02;al2.computeLineDistances();G.clr.add(al2);
+
+// Vertical edge lines at arc boundary (every 15°)
+const vm=new T.LineBasicMaterial({color:0xef4444,transparent:true,opacity:.12});
+for(let i=0;i<=6;i++){const th=i/6*Math.PI/2;
+  const vp=[cx+CR*Math.sin(th),.01,cz+CR*Math.cos(th),cx+CR*Math.sin(th),TK.H-.01,cz+CR*Math.cos(th)];
+  const vg=new T.BufferGeometry();vg.setAttribute('position',new T.Float32BufferAttribute(vp,3));
+  G.clr.add(new T.LineSegments(vg,vm));
+}
+
+// Diagonal radius label
+const clrL=lbl('Zone dégagement','90° — Rayon 1.0 m','clr');
+clrL.position.set(cx+.55,.25,cz+.55);G.lbl.add(clrL);
+
+/* ══════════════════════════════════ */
+/* ── ARMOIRE ÉLECTRIQUE ── */
+/* ══════════════════════════════════ */
+// Against driver wall, behind table: Z ≈ 2.91
+const cabZ=2.91+CB.S/2;
+const cabM=box(CB.S,CB.S,CB.S,0x2563eb,.55,.3);
+cabM.position.set(CB.S/2,CB.S/2,cabZ);G.cab.add(cabM);
+
+// Door handle detail
+const hd=new T.Mesh(new T.BoxGeometry(.02,.12,.02),new T.MeshStandardMaterial({color:0xaaaaaa,metalness:.9,roughness:.2}));
+hd.position.set(CB.S-.02,CB.S/2,cabZ+CB.S/2+.02);G.cab.add(hd);
+
+const cabL=lbl('Armoire élec.','30" cube (0.762m)','cab');
+cabL.position.set(CB.S/2,CB.S+.15,cabZ);G.lbl.add(cabL);
+
+/* ══════════════════════════════════ */
+/* ── RANGEMENT ── */
+/* ══════════════════════════════════ */
+const stZ=2.46+ST.L/2;
+const stM=box(ST.W,ST.H,ST.L,0x059669,.3,.5);
+stM.position.set(TK.W-ST.W/2,ST.H/2,stZ);G.sto.add(stM);
+
+const stL=lbl('Rangement','0.60 × 0.50 × 0.80m','sto');
+stL.position.set(TK.W-ST.W/2,ST.H+.15,stZ);G.lbl.add(stL);
+
+/* ══════════════════════════════════ */
+/* ── DIMENSION LABELS ── */
+/* ══════════════════════════════════ */
+function dimLine(a,b,col=0xf59e0b){
+  const g=new T.BufferGeometry().setFromPoints([new T.Vector3(...a),new T.Vector3(...b)]);
+  const l=new T.Line(g,new T.LineDashedMaterial({color:col,dashSize:.06,gapSize:.04,transparent:true,opacity:.3}));
+  l.computeLineDistances();return l;
+}
+G.lbl.add(dimLine([TK.W+.2,.01,0],[TK.W+.2,.01,TK.L]));
+const dL1=lbl('4.00 m','','dim');dL1.position.set(TK.W+.2,.01,TK.L/2);G.lbl.add(dL1);
+
+G.lbl.add(dimLine([0,.01,TK.L+.2],[TK.W,.01,TK.L+.2]));
+const dL2=lbl('2.045 m','','dim');dL2.position.set(TK.W/2,.01,TK.L+.2);G.lbl.add(dL2);
+
+G.lbl.add(dimLine([TK.W+.2,0,0],[TK.W+.2,TK.H,0]));
+const dL3=lbl('1.98 m','','dim');dL3.position.set(TK.W+.2,TK.H/2,0);G.lbl.add(dL3);
+
+// Orientation labels
+const oF=lbl('CABINE ◂','','dim');oF.position.set(TK.W/2,TK.H/2,-.4);G.lbl.add(oF);
+const oR=lbl('▸ ARRIÈRE','','dim');oR.position.set(TK.W/2,TK.H/2,TK.L+.4);G.lbl.add(oR);
+const oD=lbl('CONDUCTEUR','','dim');oD.position.set(-.3,TK.H/2,TK.L/2);G.lbl.add(oD);
+const oP=lbl('PASSAGER','','dim');oP.position.set(TK.W+.3,TK.H/2,TK.L/2);G.lbl.add(oP);
+
+/* ══════════════════════════════════ */
+/* ── ANIMATION ── */
+/* ══════════════════════════════════ */
+let ip=0; // intro progress
+let tp=null,tf2=null,ta=0; // target position, from, anim progress
+
+function ease(t){return 1-Math.pow(1-t,3)}
+
+function animate(){
+  requestAnimationFrame(animate);
+
+  // Intro dolly
+  if(ip<1){ip=Math.min(ip+.008,1);cam.position.lerpVectors(startPos,endPos,ease(ip));ctl.update()}
+
+  // View transition
+  if(tp){ta=Math.min(ta+.018,1);cam.position.lerpVectors(tf2,tp,ease(ta));ctl.update();if(ta>=1)tp=null}
+
+  ctl.update();
+
+  // Clearance pulse
+  if(G.clr.visible)cm.opacity=.04+Math.sin(Date.now()*.002)*.025;
+
+  // Bore glow pulse
+  if(G.irm.visible)glow.material.opacity=.06+Math.sin(Date.now()*.003)*.04;
+
+  r.render(scene,cam);
+  lr.render(scene,cam);
+}
+animate();
+
+/* ── View presets ── */
+const V={
+  persp:new T.Vector3(4.5,2.8,6),
+  top:new T.Vector3(TK.W/2,7,TK.L/2+.01),
+  drv:new T.Vector3(-3.5,1.6,TK.L/2),
+  pas:new T.Vector3(TK.W+3.5,1.6,TK.L/2),
+  rear:new T.Vector3(TK.W/2,1.6,TK.L+4.5),
+  front:new T.Vector3(TK.W/2,1.6,-3.5)
+};
+
+document.querySelectorAll('.vb[data-v]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.vb[data-v]').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  tf2=cam.position.clone();tp=V[b.dataset.v].clone();ta=0;
+}));
+
+/* ── Toggles ── */
+const TM={'t-irm':'irm','t-tbl':'tbl','t-clr':'clr','t-cab':'cab','t-sto':'sto','t-lbl':'lbl','t-wal':'wal'};
+Object.entries(TM).forEach(([id,gn])=>document.getElementById(id).addEventListener('change',e=>{G[gn].visible=e.target.checked}));
+
+/* ── Fullscreen ── */
+document.getElementById('fs').addEventListener('click',()=>{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()});
+
+/* ── Resize ── */
+addEventListener('resize',()=>{cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();r.setSize(innerWidth,innerHeight);lr.setSize(innerWidth,innerHeight)});
+</script>
+</body>
+</html>
