@@ -67,23 +67,23 @@
     </div>
     <div class="spec">
       <div class="spec-label">Appareil IRM</div>
-      <div class="spec-value">1.0 x 0.82 m</div>
-      <div class="spec-detail">Hauteur : 1.50 m (59") | Console intégrée</div>
+      <div class="spec-value">1.0 × 0.82 m</div>
+      <div class="spec-detail">H : 1.50 m (59") — Console intégrée</div>
     </div>
     <div class="spec">
       <div class="spec-label">Table patient</div>
-      <div class="spec-value">1.82 x 0.75 m</div>
-      <div class="spec-detail">Alignée avec l'ouverture IRM</div>
+      <div class="spec-value">1.82 × 0.75 m</div>
+      <div class="spec-detail">Alignée avec l'ouverture bore IRM</div>
     </div>
     <div class="spec">
       <div class="spec-label">Armoire électrique</div>
-      <div class="spec-value">30" x 30" x 30"</div>
-      <div class="spec-detail">0.762 x 0.762 x 0.762 m</div>
+      <div class="spec-value">30" × 30" × 30"</div>
+      <div class="spec-detail">0.762 m cube — unique</div>
     </div>
     <div class="spec">
-      <div class="spec-label">Zone de dégagement IRM</div>
-      <div class="spec-value">1.0 m / 180°</div>
-      <div class="spec-detail">Rayon dégagé côté passager</div>
+      <div class="spec-label">Zone de dégagement</div>
+      <div class="spec-value">1.0 m / 90°</div>
+      <div class="spec-detail">IRM en coin — quadrant dégagé</div>
     </div>
     <div class="spec">
       <div class="spec-label">Largeur ext.</div>
@@ -93,199 +93,190 @@
   </div>
 
   <div class="grid">
-    <!-- ═══ VUE DE DESSUS (FLOOR PLAN) ═══ -->
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ═══ VUE DE DESSUS — FLOOR PLAN ═══════════ -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- Uniform scale: 175 px/m -->
+    <!-- Truck: 4.0m × 2.045m = 700 × 358 px -->
     <div class="plan-card full">
-      <h2>Vue de dessus — Plan d'aménagement (Floor Plan)</h2>
-      <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
-        <!-- Background -->
-        <rect x="0" y="0" width="900" height="520" fill="#0d0d0d" rx="8" />
+      <h2>Vue de dessus — Plan d'aménagement</h2>
+      <svg viewBox="0 0 920 530" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="920" height="530" fill="#0d0d0d" rx="8" />
 
-        <!-- Scale reference -->
-        <text x="20" y="30" fill="#525252" font-size="11">Échelle : 1 carreau = 0.5 m | Côté conducteur = HAUT | Côté passager = BAS</text>
+        <text x="20" y="28" fill="#525252" font-size="11">Échelle : 175 px = 1 m | HAUT = conducteur | BAS = passager</text>
 
-        <!-- Grid -->
+        <!-- Grid pattern -->
         <defs>
-          <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+          <pattern id="grid" width="43.75" height="43.75" patternUnits="userSpaceOnUse">
+            <path d="M 43.75 0 L 0 0 0 43.75" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
           </pattern>
         </defs>
-        <rect x="80" y="60" width="740" height="400" fill="url(#grid)" />
+        <rect x="80" y="55" width="740" height="410" fill="url(#grid)" />
 
-        <!-- Truck interior walls -->
-        <rect x="100" y="80" width="700" height="340" fill="none" stroke="#525252" stroke-width="3" rx="4" />
-
-        <!-- Dimension labels - Length -->
-        <line x1="100" y1="460" x2="800" y2="460" stroke="#f59e0b" stroke-width="1" />
-        <line x1="100" y1="455" x2="100" y2="465" stroke="#f59e0b" stroke-width="1" />
-        <line x1="800" y1="455" x2="800" y2="465" stroke="#f59e0b" stroke-width="1" />
-        <text x="450" y="480" fill="#f59e0b" font-size="13" text-anchor="middle" font-weight="600">4.00 m (157.5")</text>
-
-        <!-- Dimension labels - Width -->
-        <line x1="840" y1="80" x2="840" y2="420" stroke="#f59e0b" stroke-width="1" />
-        <line x1="835" y1="80" x2="845" y2="80" stroke="#f59e0b" stroke-width="1" />
-        <line x1="835" y1="420" x2="845" y2="420" stroke="#f59e0b" stroke-width="1" />
-        <text x="865" y="255" fill="#f59e0b" font-size="13" text-anchor="middle" font-weight="600" transform="rotate(90, 865, 255)">2.045 m (80.5")</text>
+        <!-- ── Truck interior walls ── -->
+        <rect x="100" y="80" width="700" height="358" fill="none" stroke="#525252" stroke-width="3" rx="4" />
 
         <!-- Side labels -->
-        <text x="450" y="74" fill="#22c55e" font-size="11" text-anchor="middle" font-weight="600">▲ CÔTÉ CONDUCTEUR (gauche)</text>
-        <text x="450" y="440" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="600">▼ CÔTÉ PASSAGER (droit)</text>
+        <text x="450" y="72" fill="#22c55e" font-size="11" text-anchor="middle" font-weight="600">▲ CÔTÉ CONDUCTEUR (gauche)</text>
+        <text x="450" y="453" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="600">▼ CÔTÉ PASSAGER (droit)</text>
 
-        <!-- AVANT (CAB) label -->
-        <rect x="60" y="220" width="40" height="60" fill="#262626" rx="4" />
-        <text x="80" y="254" fill="#737373" font-size="10" text-anchor="middle" font-weight="600">CAB</text>
-        <path d="M 60 240 L 40 230 L 40 270 Z" fill="#262626" />
+        <!-- CAB -->
+        <rect x="58" y="228" width="42" height="58" fill="#262626" rx="4" />
+        <text x="79" y="261" fill="#737373" font-size="10" text-anchor="middle" font-weight="600">CAB</text>
+        <path d="M 58 247 L 38 237 L 38 277 Z" fill="#262626" />
 
-        <!-- ARRIERE label -->
-        <text x="815" y="254" fill="#737373" font-size="10" text-anchor="start" font-weight="600" transform="rotate(90, 815, 254)">ARRIÈRE</text>
+        <!-- ARRIERE + Rear door (roll-up, full width) -->
+        <rect x="798" y="175" width="8" height="168" fill="#1a6b3a" rx="2" />
+        <text x="815" y="264" fill="#22c55e" font-size="9" text-anchor="start">PORTE</text>
+        <text x="815" y="276" fill="#22c55e" font-size="9" text-anchor="start">ARRIÈRE</text>
 
-        <!-- Rear doors -->
-        <line x1="800" y1="80" x2="800" y2="220" stroke="#525252" stroke-width="3" />
-        <line x1="800" y1="280" x2="800" y2="420" stroke="#525252" stroke-width="3" />
-        <rect x="795" y="218" width="10" height="64" fill="#1a6b3a" rx="2" />
-        <text x="810" y="254" fill="#22c55e" font-size="9" text-anchor="start">PORTE</text>
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── 90° CLEARANCE ZONE (draw first, behind everything) ── -->
+        <!-- Center: IRM inner corner at (275, 223) -->
+        <!-- Radius: 1m = 175px -->
+        <!-- Quadrant: 0° (toward rear) to +90° (toward passenger) -->
+        <path d="M 275 223 L 450 223 A 175 175 0 0 1 275 398 Z"
+              fill="#ef4444" fill-opacity="0.06" stroke="none" />
+        <path d="M 450 223 A 175 175 0 0 1 275 398"
+              fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="8 4" />
+        <!-- Radius lines -->
+        <line x1="275" y1="223" x2="450" y2="223" stroke="#ef4444" stroke-width="1" stroke-dasharray="5 3" />
+        <line x1="275" y1="223" x2="275" y2="398" stroke="#ef4444" stroke-width="1" stroke-dasharray="5 3" />
+        <!-- Diagonal radius + label -->
+        <line x1="275" y1="223" x2="399" y2="347" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="4 3" />
+        <text x="350" y="280" fill="#ef4444" font-size="10" text-anchor="middle" font-weight="600" transform="rotate(45, 350, 280)">1.0 m</text>
+        <!-- Zone label -->
+        <text x="370" y="340" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="600">ZONE DÉGAGEMENT</text>
+        <text x="370" y="354" fill="#ef4444" font-size="10" text-anchor="middle">90° — Rayon 1.0 m</text>
 
-        <!-- ══════════════════════════════════════ -->
-        <!-- ── APPAREIL IRM (côté conducteur) ──  -->
-        <!-- IRM: 1.0m long x 0.82m wide, against driver's side wall -->
-        <!-- In SVG: truck is 700px wide (100-800), 340px tall (80-420) -->
-        <!-- Scale: 700px = 4.0m → 175px/m ; 340px = 2.045m → 166.26px/m -->
-        <!-- IRM length 1.0m = 175px, IRM width 0.82m = 136px -->
-        <!-- Centered longitudinally in truck: x = 100 + (700-175)/2 = 362 -->
-        <!-- Against driver wall (top): y = 80 -->
-        <rect x="362" y="80" width="175" height="136" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2.5" rx="6" />
-        <text x="450" y="138" fill="#fbbf24" font-size="14" text-anchor="middle" font-weight="700">APPAREIL IRM</text>
-        <text x="450" y="156" fill="#f59e0b" font-size="11" text-anchor="middle">1.00 m x 0.82 m (H: 1.50 m)</text>
-        <text x="450" y="172" fill="#f59e0b" font-size="10" text-anchor="middle" font-style="italic">Console intégrée</text>
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── APPAREIL IRM (front-driver corner) ── -->
+        <!-- 1.0m × 0.82m = 175 × 143 px -->
+        <rect x="100" y="80" width="175" height="143" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2.5" rx="6" />
+        <text x="187" y="140" fill="#fbbf24" font-size="14" text-anchor="middle" font-weight="700">IRM</text>
+        <text x="187" y="158" fill="#f59e0b" font-size="10" text-anchor="middle">1.0 × 0.82 m</text>
+        <text x="187" y="173" fill="#f59e0b" font-size="9" text-anchor="middle" font-style="italic">H: 1.50 m | Console int.</text>
 
-        <!-- Patient opening indicator (on the passenger side of IRM) -->
-        <rect x="420" y="216" width="60" height="10" fill="#f59e0b" fill-opacity="0.4" rx="2" />
-        <text x="450" y="240" fill="#f59e0b" font-size="9" text-anchor="middle">Ouverture bore</text>
+        <!-- Bore opening indicator -->
+        <rect x="270" y="132" width="10" height="40" fill="#f59e0b" fill-opacity="0.4" rx="2" />
 
-        <!-- ── ZONE DE DÉGAGEMENT 1m / 180° ── -->
-        <!-- Arc centered on the bore opening, radius 1m = 166px -->
-        <!-- Bore center approximately at x=450, y=216 -->
-        <!-- 180° arc opens toward passenger side (downward in SVG) -->
-        <path d="M 284 216 A 166 166 0 0 1 616 216" fill="#ef4444" fill-opacity="0.06" stroke="#ef4444" stroke-width="2" stroke-dasharray="8 4" />
-        <text x="450" y="350" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="600">ZONE DE DÉGAGEMENT</text>
-        <text x="450" y="364" fill="#ef4444" font-size="10" text-anchor="middle">Rayon 1.0 m — 180° dégagé</text>
-        <!-- Radius indicators -->
-        <line x1="450" y1="216" x2="450" y2="382" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="4 3" />
-        <line x1="450" y1="216" x2="284" y2="216" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="4 3" />
-        <line x1="450" y1="216" x2="616" y2="216" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="4 3" />
-        <!-- 1m label on radius -->
-        <text x="460" y="305" fill="#ef4444" font-size="9" text-anchor="start">1.0 m</text>
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── TABLE PATIENT ── -->
+        <!-- 1.82m × 0.75m = 318 × 131 px -->
+        <!-- From bore opening (x=275), centered on bore (y=152) -->
+        <rect x="275" y="87" width="318" height="131" fill="#3a1a3a" fill-opacity="0.35" stroke="#a855f7" stroke-width="1.5" rx="3" />
+        <text x="434" y="148" fill="#c084fc" font-size="12" text-anchor="middle" font-weight="600">TABLE PATIENT</text>
+        <text x="434" y="166" fill="#a855f7" font-size="10" text-anchor="middle">1.82 m × 0.75 m</text>
+        <!-- Arrow: patient entry from rear -->
+        <line x1="593" y1="152" x2="640" y2="152" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 2" />
+        <polygon points="638,147 648,152 638,157" fill="#a855f7" />
+        <!-- Arrow: table slides into bore -->
+        <line x1="275" y1="152" x2="240" y2="152" stroke="#a855f7" stroke-width="1" stroke-dasharray="3 2" />
+        <polygon points="242,157 232,152 242,147" fill="#a855f7" />
 
-        <!-- ── TABLE / CIVIÈRE PATIENT ── -->
-        <!-- 1.82m x 0.75m, aligned with IRM bore -->
-        <!-- 1.82m = 318px, 0.75m = 125px -->
-        <!-- Aligned so patient slides into bore: x starts at IRM right edge going toward rear door -->
-        <!-- Table center aligns with bore center (x=450) longitudinally, so x starts at 537 -->
-        <rect x="537" y="154" width="218" height="125" fill="#3a1a3a" fill-opacity="0.4" stroke="#a855f7" stroke-width="1.5" rx="3" />
-        <text x="646" y="210" fill="#c084fc" font-size="12" text-anchor="middle" font-weight="600">TABLE PATIENT</text>
-        <text x="646" y="228" fill="#a855f7" font-size="10" text-anchor="middle">1.82 m x 0.75 m</text>
-        <!-- Arrow showing patient entry from rear -->
-        <line x1="755" y1="216" x2="805" y2="216" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 2" />
-        <polygon points="803,211 813,216 803,221" fill="#a855f7" />
-        <!-- Arrow showing table slides into IRM -->
-        <line x1="537" y1="216" x2="500" y2="216" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 2" />
-        <polygon points="502,221 492,216 502,211" fill="#a855f7" />
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── ARMOIRE ÉLECTRIQUE (driver wall, behind table) ── -->
+        <!-- 0.762m = 133 px cube -->
+        <rect x="610" y="80" width="133" height="133" fill="#1e3a5f" fill-opacity="0.5" stroke="#3b82f6" stroke-width="2" rx="3" />
+        <text x="676" y="138" fill="#60a5fa" font-size="11" text-anchor="middle" font-weight="600">ARMOIRE</text>
+        <text x="676" y="153" fill="#60a5fa" font-size="11" text-anchor="middle" font-weight="600">ÉLECTRIQUE</text>
+        <text x="676" y="170" fill="#3b82f6" font-size="9" text-anchor="middle">30"³ (0.762 m)</text>
 
-        <!-- ── ARMOIRE ÉLECTRIQUE (unique, 30x30x30") ── -->
-        <!-- 0.762m x 0.762m = 133px x 127px -->
-        <!-- Positioned at front-left (near cab, driver side) — outside clearance zone -->
-        <rect x="105" y="85" width="133" height="127" fill="#1e3a5f" fill-opacity="0.5" stroke="#3b82f6" stroke-width="2" rx="3" />
-        <text x="171" y="140" fill="#60a5fa" font-size="11" text-anchor="middle" font-weight="600">ARMOIRE</text>
-        <text x="171" y="154" fill="#60a5fa" font-size="11" text-anchor="middle" font-weight="600">ÉLECTRIQUE</text>
-        <text x="171" y="172" fill="#3b82f6" font-size="9" text-anchor="middle">30" x 30" x 30"</text>
-        <text x="171" y="185" fill="#3b82f6" font-size="9" text-anchor="middle">(0.762 m cube)</text>
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── ARMOIRE DE RANGEMENT (passenger wall, mid-truck) ── -->
+        <!-- ~0.60 × 0.50 m = 105 × 87 px -->
+        <rect x="530" y="351" width="105" height="87" fill="#1a3a2a" fill-opacity="0.4" stroke="#10b981" stroke-width="1.5" rx="3" />
+        <text x="582" y="391" fill="#34d399" font-size="10" text-anchor="middle" font-weight="600">RANGEMENT</text>
+        <text x="582" y="406" fill="#10b981" font-size="8" text-anchor="middle">~0.60 × 0.50 m</text>
 
-        <!-- ── ARMOIRE DE RANGEMENT ── -->
-        <!-- Small storage cabinet, front-passenger side, outside clearance zone -->
-        <!-- ~0.60m x 0.50m = 105px x 83px -->
-        <rect x="105" y="328" width="105" height="83" fill="#1a3a2a" fill-opacity="0.4" stroke="#10b981" stroke-width="1.5" rx="3" />
-        <text x="157" y="365" fill="#34d399" font-size="10" text-anchor="middle" font-weight="600">RANGEMENT</text>
-        <text x="157" y="380" fill="#10b981" font-size="8" text-anchor="middle">~0.60 x 0.50 m</text>
+        <!-- ── Zone opérateur ── -->
+        <text x="710" y="310" fill="#404040" font-size="10" text-anchor="middle" font-style="italic">Zone</text>
+        <text x="710" y="324" fill="#404040" font-size="10" text-anchor="middle" font-style="italic">opérateur</text>
 
-        <!-- ── ZONE PASSAGE / ACCÈS ── -->
-        <text x="230" y="270" fill="#404040" font-size="10" text-anchor="middle" font-style="italic">Passage</text>
-        <text x="230" y="284" fill="#404040" font-size="10" text-anchor="middle" font-style="italic">opérateur</text>
+        <!-- ═══════════════════════════════════ -->
+        <!-- ── DIMENSION LINES ── -->
 
-        <!-- IRM dimension lines -->
-        <!-- Length -->
-        <line x1="362" y1="68" x2="537" y2="68" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="3 2" />
-        <line x1="362" y1="64" x2="362" y2="72" stroke="#f59e0b" stroke-width="0.5" />
-        <line x1="537" y1="64" x2="537" y2="72" stroke="#f59e0b" stroke-width="0.5" />
-        <text x="450" y="63" fill="#b45309" font-size="9" text-anchor="middle">1.00 m</text>
-        <!-- Width -->
-        <line x1="348" y1="80" x2="348" y2="216" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="3 2" />
-        <line x1="344" y1="80" x2="352" y2="80" stroke="#f59e0b" stroke-width="0.5" />
-        <line x1="344" y1="216" x2="352" y2="216" stroke="#f59e0b" stroke-width="0.5" />
-        <text x="338" y="152" fill="#b45309" font-size="9" text-anchor="end" transform="rotate(-90, 338, 152)">0.82 m</text>
+        <!-- Truck length -->
+        <line x1="100" y1="468" x2="800" y2="468" stroke="#f59e0b" stroke-width="1" />
+        <line x1="100" y1="463" x2="100" y2="473" stroke="#f59e0b" stroke-width="1" />
+        <line x1="800" y1="463" x2="800" y2="473" stroke="#f59e0b" stroke-width="1" />
+        <text x="450" y="487" fill="#f59e0b" font-size="13" text-anchor="middle" font-weight="600">4.00 m (157.5")</text>
 
-        <!-- Table dimension line -->
-        <line x1="537" y1="290" x2="755" y2="290" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="3 2" />
-        <text x="646" y="304" fill="#7c3aed" font-size="9" text-anchor="middle">1.82 m</text>
+        <!-- Truck width -->
+        <line x1="845" y1="80" x2="845" y2="438" stroke="#f59e0b" stroke-width="1" />
+        <line x1="840" y1="80" x2="850" y2="80" stroke="#f59e0b" stroke-width="1" />
+        <line x1="840" y1="438" x2="850" y2="438" stroke="#f59e0b" stroke-width="1" />
+        <text x="870" y="264" fill="#f59e0b" font-size="13" text-anchor="middle" font-weight="600" transform="rotate(90, 870, 264)">2.045 m (80.5")</text>
 
-        <!-- Armoire dimension -->
-        <line x1="105" y1="70" x2="238" y2="70" stroke="#3b82f6" stroke-width="0.5" stroke-dasharray="3 2" />
-        <text x="171" y="66" fill="#3b82f6" font-size="9" text-anchor="middle">30" (0.762 m)</text>
+        <!-- IRM length -->
+        <line x1="100" y1="50" x2="275" y2="50" stroke="#b45309" stroke-width="0.8" stroke-dasharray="3 2" />
+        <line x1="100" y1="46" x2="100" y2="54" stroke="#b45309" stroke-width="0.8" />
+        <line x1="275" y1="46" x2="275" y2="54" stroke="#b45309" stroke-width="0.8" />
+        <text x="187" y="45" fill="#b45309" font-size="9" text-anchor="middle">IRM: 1.00 m</text>
 
-        <!-- Compass / Orientation -->
-        <circle cx="55" cy="475" r="18" fill="#1a1a1a" stroke="#333" stroke-width="1" />
-        <text x="55" y="471" fill="#f59e0b" font-size="10" text-anchor="middle" font-weight="700">N</text>
-        <line x1="55" y1="475" x2="55" y2="462" stroke="#f59e0b" stroke-width="1.5" />
+        <!-- IRM width -->
+        <line x1="68" y1="80" x2="68" y2="223" stroke="#b45309" stroke-width="0.8" stroke-dasharray="3 2" />
+        <line x1="64" y1="80" x2="72" y2="80" stroke="#b45309" stroke-width="0.8" />
+        <line x1="64" y1="223" x2="72" y2="223" stroke="#b45309" stroke-width="0.8" />
+        <text x="58" y="155" fill="#b45309" font-size="9" text-anchor="end" transform="rotate(-90, 58, 155)">0.82 m</text>
+
+        <!-- Table length -->
+        <line x1="275" y1="230" x2="593" y2="230" stroke="#7c3aed" stroke-width="0.8" stroke-dasharray="3 2" />
+        <text x="434" y="245" fill="#7c3aed" font-size="9" text-anchor="middle">Table: 1.82 m</text>
+
+        <!-- Passenger-side gap (IRM to wall) -->
+        <line x1="82" y1="223" x2="82" y2="438" stroke="#22c55e" stroke-width="0.8" stroke-dasharray="3 2" />
+        <line x1="78" y1="223" x2="86" y2="223" stroke="#22c55e" stroke-width="0.8" />
+        <line x1="78" y1="438" x2="86" y2="438" stroke="#22c55e" stroke-width="0.8" />
+        <text x="42" y="335" fill="#22c55e" font-size="9" text-anchor="middle" transform="rotate(-90, 42, 335)">1.225 m dégagé</text>
+
       </svg>
 
       <div class="legend">
         <div class="legend-item"><div class="legend-color" style="background: #f59e0b;"></div> Appareil IRM (console intégrée)</div>
-        <div class="legend-item"><div class="legend-color" style="background: #3b82f6;"></div> Armoire électrique</div>
         <div class="legend-item"><div class="legend-color" style="background: #a855f7;"></div> Table patient</div>
-        <div class="legend-item"><div class="legend-color" style="background: #ef4444; opacity: 0.4;"></div> Zone de dégagement 1m / 180°</div>
+        <div class="legend-item"><div class="legend-color" style="background: #ef4444; opacity: 0.4;"></div> Zone dégagement 1m / 90°</div>
+        <div class="legend-item"><div class="legend-color" style="background: #3b82f6;"></div> Armoire électrique</div>
         <div class="legend-item"><div class="legend-color" style="background: #10b981;"></div> Rangement</div>
       </div>
     </div>
 
-    <!-- ═══ VUE LATÉRALE (SIDE ELEVATION) ═══ -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ═══ VUE LATÉRALE — ÉLÉVATION ═════════════ -->
+    <!-- ═══════════════════════════════════════════ -->
     <div class="plan-card">
       <h2>Vue latérale — Élévation (côté passager)</h2>
       <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="420" height="300" fill="#0d0d0d" rx="8" />
+        <rect x="25" y="25" width="370" height="250" fill="url(#grid)" />
 
-        <!-- Grid -->
-        <rect x="30" y="30" width="360" height="240" fill="url(#grid)" />
-
-        <!-- Truck outline -->
+        <!-- Truck outline (340×168, scale ~85px/m) -->
         <rect x="40" y="50" width="340" height="168" fill="none" stroke="#525252" stroke-width="2.5" rx="3" />
-
-        <!-- Floor -->
         <line x1="40" y1="218" x2="380" y2="218" stroke="#525252" stroke-width="3" />
-
-        <!-- Roof -->
         <line x1="40" y1="50" x2="380" y2="50" stroke="#525252" stroke-width="3" />
 
         <!-- CAB -->
         <rect x="10" y="100" width="30" height="118" fill="#262626" rx="3" />
         <text x="25" y="165" fill="#737373" font-size="8" text-anchor="middle" font-weight="600" transform="rotate(-90, 25, 165)">CABINE</text>
 
-        <!-- Armoire électrique (at front) -->
-        <rect x="45" y="90" width="65" height="128" fill="#1e3a5f" fill-opacity="0.5" stroke="#3b82f6" stroke-width="1.5" rx="2" />
-        <text x="77" y="150" fill="#60a5fa" font-size="8" text-anchor="middle" font-weight="600">ARM.</text>
-        <text x="77" y="162" fill="#60a5fa" font-size="8" text-anchor="middle" font-weight="600">ÉLEC.</text>
-        <text x="77" y="174" fill="#3b82f6" font-size="7" text-anchor="middle">30"³</text>
+        <!-- IRM (front corner, 1.0m long = 85px, 1.5m tall = 127px) -->
+        <rect x="40" y="91" width="85" height="127" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2" rx="4" />
+        <text x="82" y="150" fill="#fbbf24" font-size="10" text-anchor="middle" font-weight="700">IRM</text>
+        <text x="82" y="163" fill="#f59e0b" font-size="8" text-anchor="middle">1.50 m H</text>
 
-        <!-- IRM (behind armoire, centered longitudinally) -->
-        <rect x="155" y="91" width="85" height="127" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2" rx="4" />
-        <text x="197" y="145" fill="#fbbf24" font-size="10" text-anchor="middle" font-weight="700">IRM</text>
-        <text x="197" y="158" fill="#f59e0b" font-size="8" text-anchor="middle">1.50 m H</text>
-        <text x="197" y="170" fill="#f59e0b" font-size="7" text-anchor="middle" font-style="italic">Console int.</text>
+        <!-- Table patient (1.82m = 155px, at bore center height ~y=154) -->
+        <rect x="125" y="150" width="155" height="14" fill="#3a1a3a" fill-opacity="0.5" stroke="#a855f7" stroke-width="1.5" rx="2" />
+        <text x="202" y="146" fill="#c084fc" font-size="8" text-anchor="middle" font-weight="600">TABLE PATIENT</text>
 
-        <!-- Table patient -->
-        <rect x="250" y="193" width="115" height="25" fill="#3a1a3a" fill-opacity="0.5" stroke="#a855f7" stroke-width="1.5" rx="2" />
-        <text x="307" y="210" fill="#c084fc" font-size="8" text-anchor="middle" font-weight="600">TABLE PATIENT</text>
+        <!-- Elec cabinet (behind table, 0.762m = 65px cube) -->
+        <rect x="295" y="153" width="65" height="65" fill="#1e3a5f" fill-opacity="0.5" stroke="#3b82f6" stroke-width="1.5" rx="2" />
+        <text x="327" y="185" fill="#60a5fa" font-size="7" text-anchor="middle" font-weight="600">ARM.</text>
+        <text x="327" y="195" fill="#60a5fa" font-size="7" text-anchor="middle" font-weight="600">ÉLEC.</text>
 
-        <!-- Rangement (front, lower) -->
-        <rect x="45" y="178" width="50" height="40" fill="#1a3a2a" fill-opacity="0.4" stroke="#10b981" stroke-width="1" rx="2" />
-        <text x="70" y="202" fill="#34d399" font-size="7" text-anchor="middle">RANG.</text>
+        <!-- Storage (passenger wall, visible in foreground) -->
+        <rect x="210" y="183" width="51" height="35" fill="#1a3a2a" fill-opacity="0.4" stroke="#10b981" stroke-width="1" rx="2" />
+        <text x="235" y="204" fill="#34d399" font-size="6" text-anchor="middle">RANG.</text>
 
         <!-- Rear door -->
         <rect x="375" y="50" width="8" height="168" fill="#1a6b3a" fill-opacity="0.3" stroke="#22c55e" stroke-width="1" rx="1" />
@@ -296,67 +287,61 @@
         <line x1="396" y1="218" x2="404" y2="218" stroke="#f59e0b" stroke-width="0.5" />
         <text x="410" y="138" fill="#f59e0b" font-size="9" text-anchor="start" transform="rotate(90, 410, 138)">1.98 m (78")</text>
 
-        <!-- IRM height -->
-        <line x1="145" y1="91" x2="145" y2="218" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="2 2" />
-        <text x="140" y="160" fill="#b45309" font-size="8" text-anchor="end" transform="rotate(-90, 140, 160)">1.50 m</text>
+        <!-- IRM height indicator -->
+        <line x1="30" y1="91" x2="30" y2="218" stroke="#b45309" stroke-width="0.5" stroke-dasharray="2 2" />
+        <text x="24" y="160" fill="#b45309" font-size="8" text-anchor="end" transform="rotate(-90, 24, 160)">IRM: 1.50 m</text>
 
-        <!-- Clearance above IRM -->
-        <line x1="155" y1="91" x2="240" y2="91" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="2 2" />
-        <line x1="155" y1="50" x2="240" y2="50" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="2 2" />
-        <text x="250" y="74" fill="#ef4444" font-size="8" text-anchor="start">Dég. plafond: 0.48 m</text>
+        <!-- Ceiling clearance -->
+        <line x1="55" y1="50" x2="55" y2="91" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="2 2" />
+        <text x="70" y="74" fill="#ef4444" font-size="7" text-anchor="start">0.48 m dég.</text>
 
         <!-- Length -->
         <line x1="40" y1="240" x2="380" y2="240" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="3 2" />
         <text x="210" y="256" fill="#f59e0b" font-size="9" text-anchor="middle">4.00 m</text>
 
-        <!-- Labels -->
-        <text x="25" y="45" fill="#525252" font-size="8">AVANT</text>
-        <text x="365" y="45" fill="#525252" font-size="8">ARRIÈRE</text>
+        <text x="30" y="45" fill="#525252" font-size="8">AVANT</text>
+        <text x="360" y="45" fill="#525252" font-size="8">ARRIÈRE</text>
       </svg>
     </div>
 
-    <!-- ═══ VUE ARRIÈRE (REAR CROSS-SECTION) ═══ -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ═══ VUE ARRIÈRE — COUPE TRANSVERSALE ═════ -->
+    <!-- ═══════════════════════════════════════════ -->
     <div class="plan-card">
       <h2>Vue arrière — Coupe transversale</h2>
-      <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="420" height="300" fill="#0d0d0d" rx="8" />
-
-        <!-- Grid -->
-        <rect x="30" y="30" width="360" height="240" fill="url(#grid)" />
+      <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="420" height="320" fill="#0d0d0d" rx="8" />
+        <rect x="25" y="25" width="370" height="270" fill="url(#grid)" />
 
         <!-- Truck outline: 280px wide = 2.045m, 200px tall = 1.98m -->
         <rect x="70" y="50" width="280" height="200" fill="none" stroke="#525252" stroke-width="2.5" rx="3" />
-
-        <!-- Floor line -->
         <line x1="70" y1="250" x2="350" y2="250" stroke="#525252" stroke-width="3" />
 
         <!-- Center line -->
         <line x1="210" y1="50" x2="210" y2="250" stroke="#333" stroke-width="0.5" stroke-dasharray="4 3" />
 
-        <!-- Side labels: Looking from rear, DRIVER on RIGHT, PASSENGER on LEFT -->
-        <text x="100" y="265" fill="#ef4444" font-size="8" text-anchor="middle">PASSAGER</text>
-        <text x="320" y="265" fill="#22c55e" font-size="8" text-anchor="middle">CONDUCTEUR</text>
+        <!-- Labels: from rear, driver=RIGHT, passenger=LEFT -->
+        <text x="105" y="268" fill="#ef4444" font-size="8" text-anchor="middle">PASSAGER (droit)</text>
+        <text x="315" y="268" fill="#22c55e" font-size="8" text-anchor="middle">CONDUCTEUR (gauche)</text>
 
-        <!-- IRM against driver's side wall (right in rear view) -->
-        <!-- IRM width 0.82m = 113px, height 1.50m = 152px -->
-        <!-- Against right wall: x = 350 - 113 = 237 -->
-        <rect x="237" y="98" width="113" height="152" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2" rx="4" />
-        <text x="293" y="170" fill="#fbbf24" font-size="12" text-anchor="middle" font-weight="700">IRM</text>
-        <text x="293" y="188" fill="#f59e0b" font-size="9" text-anchor="middle">0.82 m x 1.50 m</text>
+        <!-- IRM against driver wall (right side in rear view) -->
+        <!-- Width 0.82m = 112px, Height 1.5m = 152px -->
+        <rect x="238" y="98" width="112" height="152" fill="#4a1e0a" fill-opacity="0.5" stroke="#f59e0b" stroke-width="2" rx="4" />
+        <text x="294" y="168" fill="#fbbf24" font-size="12" text-anchor="middle" font-weight="700">IRM</text>
+        <text x="294" y="186" fill="#f59e0b" font-size="9" text-anchor="middle">0.82 × 1.50 m</text>
 
-        <!-- 1m clearance zone (to the left = passenger side) -->
-        <!-- 1.0m = 137px from IRM left edge (237) toward passenger side -->
-        <rect x="100" y="98" width="137" height="152" fill="#ef4444" fill-opacity="0.06" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6 3" rx="2" />
-        <text x="168" y="165" fill="#ef4444" font-size="8" text-anchor="middle">ZONE</text>
-        <text x="168" y="177" fill="#ef4444" font-size="8" text-anchor="middle">DÉG. 1m</text>
-        <!-- 1m dimension -->
-        <line x1="100" y1="90" x2="237" y2="90" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="3 2" />
-        <text x="168" y="86" fill="#ef4444" font-size="8" text-anchor="middle">1.0 m</text>
+        <!-- Against front wall indicator (depth) -->
+        <text x="294" y="200" fill="#b45309" font-size="7" text-anchor="middle" font-style="italic">contre paroi avant</text>
 
-        <!-- Gap driver side (between IRM and wall) = 0 (flush) -->
-        <!-- Gap passenger side = 2.045 - 0.82 = 1.225m (clear for 1m requirement) -->
-        <line x1="70" y1="270" x2="237" y2="270" stroke="#22c55e" stroke-width="0.5" stroke-dasharray="3 2" />
-        <text x="153" y="284" fill="#22c55e" font-size="8" text-anchor="middle">1.225 m dégagé</text>
+        <!-- 1m clearance toward passenger side -->
+        <!-- 1.0m from IRM left edge (238) = 137px toward left -->
+        <rect x="101" y="98" width="137" height="152" fill="#ef4444" fill-opacity="0.06" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6 3" rx="2" />
+        <text x="169" y="170" fill="#ef4444" font-size="9" text-anchor="middle" font-weight="600">DÉG.</text>
+        <text x="169" y="183" fill="#ef4444" font-size="9" text-anchor="middle" font-weight="600">1.0 m</text>
+
+        <!-- Passenger-side gap -->
+        <line x1="70" y1="280" x2="238" y2="280" stroke="#22c55e" stroke-width="0.5" stroke-dasharray="3 2" />
+        <text x="154" y="293" fill="#22c55e" font-size="8" text-anchor="middle">1.225 m total</text>
 
         <!-- Width dimension -->
         <line x1="70" y1="40" x2="350" y2="40" stroke="#f59e0b" stroke-width="0.5" />
@@ -370,19 +355,15 @@
         <line x1="361" y1="250" x2="369" y2="250" stroke="#f59e0b" stroke-width="0.5" />
         <text x="380" y="155" fill="#f59e0b" font-size="9" text-anchor="start" transform="rotate(90, 380, 155)">1.98 m (78")</text>
 
-        <!-- IRM height indicator -->
-        <line x1="55" y1="98" x2="55" y2="250" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="3 2" />
-        <line x1="51" y1="98" x2="59" y2="98" stroke="#f59e0b" stroke-width="0.5" />
-        <line x1="51" y1="250" x2="59" y2="250" stroke="#f59e0b" stroke-width="0.5" />
+        <!-- IRM height -->
+        <line x1="55" y1="98" x2="55" y2="250" stroke="#b45309" stroke-width="0.5" stroke-dasharray="3 2" />
+        <line x1="51" y1="98" x2="59" y2="98" stroke="#b45309" stroke-width="0.5" />
+        <line x1="51" y1="250" x2="59" y2="250" stroke="#b45309" stroke-width="0.5" />
         <text x="45" y="180" fill="#b45309" font-size="8" text-anchor="end" transform="rotate(-90, 45, 180)">IRM: 1.50 m</text>
 
-        <!-- Table patient (in front of IRM bore opening, centered) -->
-        <rect x="180" y="230" width="100" height="20" fill="#3a1a3a" fill-opacity="0.5" stroke="#a855f7" stroke-width="1" rx="2" />
-        <text x="230" y="244" fill="#c084fc" font-size="7" text-anchor="middle">TABLE (0.75m larg.)</text>
-
-        <!-- Rear door opening -->
-        <rect x="100" y="248" width="130" height="6" fill="#22c55e" fill-opacity="0.3" rx="1" />
-        <text x="165" y="262" fill="#22c55e" font-size="7" text-anchor="middle">Ouverture porte arrière</text>
+        <!-- Table cross-section (visible at bore opening) -->
+        <rect x="248" y="182" width="92" height="10" fill="#3a1a3a" fill-opacity="0.5" stroke="#a855f7" stroke-width="1" rx="1" />
+        <text x="294" y="205" fill="#c084fc" font-size="7" text-anchor="middle">Table (0.75 m larg.)</text>
       </svg>
     </div>
   </div>
@@ -391,17 +372,17 @@
   <div class="notes">
     <h2>Notes techniques</h2>
     <ul>
-      <li>L'appareil IRM est positionné contre la paroi côté conducteur (gauche) pour dégager le rayon d'1 m requis côté passager</li>
-      <li>Zone de dégagement : rayon de 1.0 m sur 180° dégagé côté passager — aucun obstacle dans cette zone</li>
-      <li>Espace disponible côté passager : 1.225 m (dépasse le 1.0 m requis — conforme)</li>
-      <li>La console opérateur est intégrée à l'appareil IRM — pas de poste séparé nécessaire</li>
-      <li>Table patient (1.82 m x 0.75 m) alignée avec l'ouverture du bore IRM — accès patient par la porte arrière</li>
-      <li>Armoire électrique unique (30" x 30" x 30") positionnée à l'avant côté conducteur, proche de l'alimentation cabine</li>
-      <li>Armoire de rangement (~0.60 x 0.50 m) à l'avant côté passager — hors zone de dégagement</li>
-      <li>Dégagement au plafond au-dessus de l'IRM : 0.48 m (18.9") — suffisant pour ventilation et câblage</li>
-      <li>Prévoir blindage RF (cage de Faraday) sur toute la zone IRM si requis par le fabricant</li>
-      <li>Système de climatisation requis pour maintenir la température de l'IRM dans les specs fabricant</li>
-      <li>Renforcement du plancher recommandé selon le poids de l'appareil IRM</li>
+      <li><strong>Position IRM :</strong> Coin avant-conducteur (avant gauche) — contre la paroi avant et la paroi conducteur</li>
+      <li><strong>Dégagement 90° :</strong> Le coin expose un quadrant de 90° vers l'intérieur du véhicule. Zone dégagée sur 1.0 m de rayon dans ce quadrant — aucun obstacle métallique ou ferromagnétique autorisé</li>
+      <li><strong>Espace passager :</strong> 1.225 m entre l'IRM et la paroi passager (dépasse le 1.0 m requis — conforme)</li>
+      <li><strong>Console intégrée :</strong> La console opérateur est intégrée à l'appareil IRM — aucun poste séparé nécessaire</li>
+      <li><strong>Table patient :</strong> 1.82 m × 0.75 m, alignée avec l'ouverture bore — accès patient par la porte arrière</li>
+      <li><strong>Armoire électrique :</strong> Cube 30" (0.762 m), positionnée le long de la paroi conducteur derrière la table, hors zone de dégagement</li>
+      <li><strong>Rangement :</strong> Armoire ~0.60 × 0.50 m côté passager, hors zone de dégagement</li>
+      <li><strong>Dégagement plafond :</strong> 0.48 m (18.9") au-dessus de l'IRM — suffisant pour ventilation et câblage</li>
+      <li><strong>Blindage RF :</strong> Prévoir cage de Faraday sur toute la zone IRM si requis par le fabricant</li>
+      <li><strong>Climatisation :</strong> Système requis pour maintenir la température IRM dans les specs fabricant</li>
+      <li><strong>Plancher :</strong> Renforcement recommandé selon le poids de l'appareil IRM</li>
     </ul>
   </div>
 
