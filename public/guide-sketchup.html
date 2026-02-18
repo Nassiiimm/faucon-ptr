@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide SketchUp — IRM Mobile T350 14' — Faucon PTR</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0a; color: #e5e5e5; padding: 40px 20px; line-height: 1.7; }
+  .page { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  h1 span { color: #f59e0b; }
+  .subtitle { color: #737373; font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 20px; font-weight: 600; color: #f59e0b; margin: 40px 0 16px; padding-top: 20px; border-top: 1px solid #262626; }
+  h3 { font-size: 16px; color: #d4d4d4; margin: 24px 0 8px; }
+  p { color: #a3a3a3; margin-bottom: 12px; }
+  .card { background: #141414; border: 1px solid #262626; border-radius: 12px; padding: 20px; margin: 16px 0; }
+  .card-accent { border-color: #f59e0b33; background: #1a1508; }
+  .dim-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+  .dim { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 12px; }
+  .dim-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #737373; }
+  .dim-val { font-size: 22px; font-weight: 700; color: #f59e0b; }
+  .dim-detail { font-size: 11px; color: #888; }
+  .step { display: flex; gap: 16px; margin: 16px 0; }
+  .step-num { background: #f59e0b; color: #000; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content { flex: 1; }
+  .step-content strong { color: #e5e5e5; }
+  code { background: #1a1a1a; padding: 2px 8px; border-radius: 4px; font-size: 13px; color: #f59e0b; }
+  .hotkey { background: #262626; border: 1px solid #404040; padding: 2px 8px; border-radius: 4px; font-size: 12px; color: #d4d4d4; font-family: monospace; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th { text-align: left; padding: 8px 12px; background: #1a1a1a; color: #f59e0b; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 8px 12px; border-top: 1px solid #222; color: #a3a3a3; font-size: 13px; }
+  td:first-child { color: #e5e5e5; font-weight: 600; }
+  .tip { background: #0f1a0f; border: 1px solid #166534; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #86efac; }
+  .warn { background: #1a150a; border: 1px solid #92400e; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #fbbf24; }
+  .search-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .search-item { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 12px; }
+  .search-item strong { color: #e5e5e5; display: block; margin-bottom: 4px; }
+  .search-item span { font-size: 12px; color: #888; }
+  .search-item code { font-size: 11px; }
+  .pos-table td:nth-child(2) { font-family: monospace; color: #f59e0b; }
+  .footer { text-align: center; color: #525252; font-size: 12px; padding-top: 32px; border-top: 1px solid #262626; margin-top: 40px; }
+  a { color: #f59e0b; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { color: #a3a3a3; margin: 4px 0; font-size: 14px; }
+  li strong { color: #d4d4d4; }
+  @media print {
+    body { background: white; color: #111; }
+    .card, .dim, .search-item { background: #f5f5f5; border-color: #ddd; }
+    h2, .dim-val, code { color: #b45309; }
+    p, li, td { color: #444; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>FAUCON <span>PTR</span> — Guide SketchUp</h1>
+<p class="subtitle">IRM Mobile T350 14' — Toutes les specs pour modeliser dans SketchUp Free</p>
+
+<!-- ══════════════════════════════════════ -->
+<h2>0. Demarrage rapide</h2>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <strong>Ouvrir SketchUp Free</strong><br>
+    <p>Va sur <a href="https://app.sketchup.com" target="_blank">app.sketchup.com</a> — cree un compte gratuit si besoin.</p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <strong>Configurer les unites</strong><br>
+    <p>Menu <code>Model Info</code> (icone engrenage) &rarr; <code>Units</code> &rarr; choisir <strong>Metres</strong> avec precision 0.001.</p>
+  </div>
+</div>
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <strong>Raccourcis essentiels</strong><br>
+    <p>
+      <span class="hotkey">R</span> Rectangle &nbsp;
+      <span class="hotkey">P</span> Push/Pull &nbsp;
+      <span class="hotkey">M</span> Move &nbsp;
+      <span class="hotkey">T</span> Tape Measure &nbsp;
+      <span class="hotkey">B</span> Paint Bucket &nbsp;
+      <span class="hotkey">O</span> Orbit &nbsp;
+      <span class="hotkey">Z</span> Zoom
+    </p>
+  </div>
+</div>
+
+<div class="tip">Astuce : Tape les dimensions exactes au clavier apres avoir commence a dessiner. Ex: dessine un rectangle, tape <code>2.045,4</code> puis Enter.</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>1. Dimensions de reference</h2>
+
+<h3>Vehicule — Espace cargo interieur</h3>
+<div class="dim-grid">
+  <div class="dim"><div class="dim-label">Longueur</div><div class="dim-val">4.000 m</div><div class="dim-detail">4000 mm | 157.5" | 13'1.5"</div></div>
+  <div class="dim"><div class="dim-label">Largeur</div><div class="dim-val">2.045 m</div><div class="dim-detail">2045 mm | 80.5" | 6'8.5"</div></div>
+  <div class="dim"><div class="dim-label">Hauteur</div><div class="dim-val">1.980 m</div><div class="dim-detail">1980 mm | 78" | 6'6"</div></div>
+  <div class="dim"><div class="dim-label">Largeur ext.</div><div class="dim-val">2.184 m</div><div class="dim-detail">86" | 7'2" (hors tout)</div></div>
+</div>
+
+<h3>Equipements</h3>
+<table>
+  <tr><th>Element</th><th>L (profondeur)</th><th>W (largeur)</th><th>H (hauteur)</th><th>Notes</th></tr>
+  <tr><td>Appareil IRM</td><td>1.000 m</td><td>0.820 m</td><td>1.500 m</td><td>Console integree, bore diam. ~52cm</td></tr>
+  <tr><td>Table patient</td><td>1.820 m</td><td>0.750 m</td><td>0.050 m</td><td>Elevation : 0.75m du sol</td></tr>
+  <tr><td>Armoire electrique</td><td>0.762 m</td><td>0.762 m</td><td>0.762 m</td><td>30" cube</td></tr>
+  <tr><td>Rangement</td><td>0.600 m</td><td>0.500 m</td><td>0.800 m</td><td>Armoire auxiliaire</td></tr>
+  <tr><td>Zone degagement</td><td colspan="3">Rayon 1.0 m, arc 90 degres</td><td>Depuis le coin interieur de l'IRM</td></tr>
+</table>
+
+<!-- ══════════════════════════════════════ -->
+<h2>2. Positions exactes (coordonnees)</h2>
+
+<div class="card card-accent">
+  <p style="color:#fbbf24;margin:0"><strong>Systeme de coordonnees :</strong> Origine (0,0,0) = coin avant-conducteur au sol (coin avant-gauche vu de dessus). X = largeur (vers passager), Y = profondeur/longueur (vers arriere), Z = hauteur (vers le haut).</p>
+</div>
+
+<table class="pos-table">
+  <tr><th>Element</th><th>Position du coin bas-avant</th><th>Taille (L x W x H)</th></tr>
+  <tr><td>Boite camion (interieur)</td><td>0, 0, 0</td><td>2.045 x 4.000 x 1.980</td></tr>
+  <tr><td>IRM</td><td>0, 0, 0</td><td>0.820 x 1.000 x 1.500</td></tr>
+  <tr><td>Table patient</td><td>0.035, 1.000, 0.725</td><td>0.750 x 1.820 x 0.050</td></tr>
+  <tr><td>Armoire electrique</td><td>1.283, 2.119, 0</td><td>0.762 x 0.762 x 0.762</td></tr>
+  <tr><td>Rangement</td><td>1.545, 3.100, 0</td><td>0.500 x 0.600 x 0.800</td></tr>
+</table>
+
+<div class="warn">Important : L'armoire electrique est cote PASSAGER (opposee a l'IRM et la table qui sont cote conducteur).</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>3. Construction etape par etape</h2>
+
+<h3>Etape A — La boite du camion</h3>
+<div class="step">
+  <div class="step-num">A</div>
+  <div class="step-content">
+    <p>1. <span class="hotkey">R</span> Rectangle au sol &rarr; tape <code>2.045,4</code><br>
+    2. <span class="hotkey">P</span> Push/Pull vers le haut &rarr; tape <code>1.98</code><br>
+    3. Selectionne tout &rarr; clic droit &rarr; <strong>Make Group</strong><br>
+    4. Supprime la face du dessus et la face arriere (pour voir l'interieur, vue cutaway)</p>
+    <div class="tip">Astuce : Pour la vue cutaway comme les images Le Van Migrateur, supprime le toit + un mur lateral. Tu peux aussi utiliser <strong>Section Plane</strong> (menu Tools) pour couper proprement.</div>
+  </div>
+</div>
+
+<h3>Etape B — L'appareil IRM</h3>
+<div class="step">
+  <div class="step-num">B</div>
+  <div class="step-content">
+    <p>1. <span class="hotkey">R</span> Rectangle &rarr; tape <code>0.82,1</code><br>
+    2. <span class="hotkey">P</span> Push/Pull &rarr; tape <code>1.5</code><br>
+    3. Positionne dans le coin avant-conducteur (origine)<br>
+    4. Pour le bore : dessine un <strong>cercle</strong> (diam 0.52m) au centre de la face arriere de l'IRM, Push/Pull vers l'interieur<br>
+    5. Make Group</p>
+    <p>OU mieux : cherche un modele dans le <strong>3D Warehouse</strong> (voir section 5)</p>
+  </div>
+</div>
+
+<h3>Etape C — Table patient</h3>
+<div class="step">
+  <div class="step-num">C</div>
+  <div class="step-content">
+    <p>1. <span class="hotkey">R</span> Rectangle &rarr; <code>0.75,1.82</code><br>
+    2. <span class="hotkey">P</span> Push/Pull &rarr; <code>0.05</code> (epaisseur plateau)<br>
+    3. <span class="hotkey">M</span> Move &rarr; aligne le bore de l'IRM (Y=1.0, centree X sur l'IRM)<br>
+    4. Ajoute 4 pieds cylindriques (hauteur 0.725m)<br>
+    5. Make Group</p>
+  </div>
+</div>
+
+<h3>Etape D — Armoire electrique</h3>
+<div class="step">
+  <div class="step-num">D</div>
+  <div class="step-content">
+    <p>1. <span class="hotkey">R</span> Rectangle &rarr; <code>0.762,0.762</code><br>
+    2. <span class="hotkey">P</span> Push/Pull &rarr; <code>0.762</code><br>
+    3. <span class="hotkey">M</span> Move vers la paroi PASSAGER &rarr; position X=1.283, Y=2.119<br>
+    4. Make Group</p>
+  </div>
+</div>
+
+<h3>Etape E — Rangement</h3>
+<div class="step">
+  <div class="step-num">E</div>
+  <div class="step-content">
+    <p>1. <span class="hotkey">R</span> Rectangle &rarr; <code>0.5,0.6</code><br>
+    2. <span class="hotkey">P</span> Push/Pull &rarr; <code>0.8</code><br>
+    3. <span class="hotkey">M</span> Move &rarr; position X=1.545, Y=3.1, contre la paroi passager<br>
+    4. Make Group</p>
+  </div>
+</div>
+
+<h3>Etape F — Zone de degagement</h3>
+<div class="step">
+  <div class="step-num">F</div>
+  <div class="step-content">
+    <p>1. Dessine un arc de 90 degres depuis le coin interieur de l'IRM (X=0.82, Y=1.0)<br>
+    2. Rayon = 1.0m, du mur conducteur vers le mur passager, de l'IRM vers l'arriere<br>
+    3. Laisse-le comme trait au sol (pas besoin de l'extruder)<br>
+    4. Couleur rouge transparent</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>4. Materiaux recommandes</h2>
+
+<table>
+  <tr><th>Element</th><th>Materiau SketchUp</th><th>Couleur / Texture</th></tr>
+  <tr><td>Murs interieurs</td><td>Metal > Brushed Aluminum</td><td>Blanc/gris clair</td></tr>
+  <tr><td>Plancher</td><td>Tile > Gray ou Stone</td><td>Vinyle medical gris clair</td></tr>
+  <tr><td>IRM — corps</td><td>Colors > White ou Metal > Shiny</td><td>Blanc pur</td></tr>
+  <tr><td>IRM — base</td><td>Metal > Dark Anodized</td><td>Gris fonce</td></tr>
+  <tr><td>Table patient</td><td>Metal > Chrome</td><td>Inox / argent</td></tr>
+  <tr><td>Coussin table</td><td>Fabric > Beige</td><td>Creme / beige clair</td></tr>
+  <tr><td>Armoire electrique</td><td>Metal > Dark Anodized</td><td>Charcoal / gris fonce</td></tr>
+  <tr><td>Rangement</td><td>Wood > Light ou Metal > Painted</td><td>Gris clair / bois</td></tr>
+  <tr><td>Zone degagement</td><td>Colors > Red (transparent)</td><td>Rouge, opacite ~20%</td></tr>
+</table>
+
+<!-- ══════════════════════════════════════ -->
+<h2>5. 3D Warehouse — Modeles a telecharger</h2>
+
+<p>Dans SketchUp, clique sur l'icone <strong>3D Warehouse</strong> (petit entrepot) et cherche ces termes :</p>
+
+<div class="search-grid">
+  <div class="search-item">
+    <strong>Machine IRM</strong>
+    <span>Cherche : <code>MRI machine</code>, <code>MRI scanner</code>, <code>Siemens MAGNETOM</code></span>
+  </div>
+  <div class="search-item">
+    <strong>Table medicale</strong>
+    <span>Cherche : <code>MRI patient table</code>, <code>medical stretcher</code>, <code>hospital bed</code></span>
+  </div>
+  <div class="search-item">
+    <strong>Armoire electrique</strong>
+    <span>Cherche : <code>electrical cabinet</code>, <code>server rack</code>, <code>electrical panel</code></span>
+  </div>
+  <div class="search-item">
+    <strong>Camion cube</strong>
+    <span>Cherche : <code>box truck</code>, <code>cube van</code>, <code>Ford Transit 350</code></span>
+  </div>
+  <div class="search-item">
+    <strong>Armoire rangement</strong>
+    <span>Cherche : <code>medical cabinet</code>, <code>storage cabinet</code></span>
+  </div>
+  <div class="search-item">
+    <strong>Personnage (echelle)</strong>
+    <span>Cherche : <code>person standing</code> pour donner l'echelle</span>
+  </div>
+</div>
+
+<div class="tip">Astuce : Quand tu telecharges un modele du 3D Warehouse, utilise <span class="hotkey">S</span> (Scale) pour l'ajuster aux bonnes dimensions, et <span class="hotkey">T</span> (Tape Measure) pour verifier.</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>6. Vue cutaway (comme les images)</h2>
+
+<p>Pour obtenir la vue isometrique avec l'interieur visible (style Le Van Migrateur) :</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content"><strong>Section Plane</strong> : Menu <code>Tools &rarr; Section Plane</code>. Place le plan de coupe horizontalement pour couper le toit, ou verticalement pour couper un mur.</div>
+</div>
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content"><strong>Camera</strong> : Menu <code>Camera &rarr; Parallel Projection</code> pour une vue isometrique (pas de perspective). Puis <code>Camera &rarr; Standard Views &rarr; Iso</code>.</div>
+</div>
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content"><strong>Style</strong> : Va dans <code>Styles</code> et choisis un style avec ombres. Active les ombres dans <code>Shadows</code> pour plus de realisme.</div>
+</div>
+<div class="step">
+  <div class="step-num">4</div>
+  <div class="step-content"><strong>Export</strong> : <code>File &rarr; Export &rarr; PNG</code> en haute resolution (4000px+ de large).</div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>7. Plan de reference (vue de dessus)</h2>
+
+<div class="card">
+  <p><strong>Utilise ton plan 2D comme guide :</strong> Ouvre <a href="plan-irm.html">plan-irm.html</a> dans un autre onglet et garde-le visible a cote de SketchUp.</p>
+  <p>Tu peux aussi faire un screenshot du plan de dessus et l'importer dans SketchUp comme image de reference au sol (<code>File &rarr; Import &rarr; Image</code>).</p>
+</div>
+
+<h3>Schema ASCII — Vue de dessus</h3>
+<div class="card" style="font-family:monospace;font-size:11px;line-height:1.4;white-space:pre;overflow-x:auto;color:#888">
+AVANT (CABINE)                                        ARRIERE (PORTE)
+|                                                                    |
+| COTE CONDUCTEUR (gauche)                                           |
+|--------------------------------------------------------------------| Y=0
+|                    |                                               |
+|   IRM              |  TABLE PATIENT                                |
+|   1.0 x 0.82m      |  1.82 x 0.75m                                |
+|   H:1.50m          |  H:0.75m                                     |
+|                    |                                               |
+|---- X=0.82 --------|                                               |
+|         :          |                                               |
+|    90deg  :  1.0m   |                                               |
+|   ZONE  :          |                            ZONE               |
+|  DEGAG. :..........|                           OPERATEUR           |
+|         :          |   ARM. ELEC.   RANGEMENT                      |
+|         :          |   0.762m cube  0.6x0.5m                       |
+|         :          |   (passager)   (passager)                     |
+|                                                                    |
+| COTE PASSAGER (droit)                                              |
+|--------------------------------------------------------------------| Y=4.0
+X=0                                                            X=2.045
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<h2>8. Checklist finale</h2>
+
+<ul>
+  <li><strong>Boite camion</strong> : 2.045 x 4.000 x 1.980m</li>
+  <li><strong>IRM</strong> : coin avant-conducteur, 0.82 x 1.0 x 1.5m</li>
+  <li><strong>Table</strong> : alignee bore, 0.75 x 1.82m a 0.75m du sol</li>
+  <li><strong>Armoire elec.</strong> : cote PASSAGER (oppose IRM), 0.762m cube</li>
+  <li><strong>Rangement</strong> : cote passager, derriere armoire, 0.6 x 0.5 x 0.8m</li>
+  <li><strong>Zone degagement</strong> : 90deg, 1.0m rayon, depuis coin IRM</li>
+  <li><strong>Materiaux</strong> : blanc IRM, inox table, vinyle sol, metal armoire</li>
+  <li><strong>Vue</strong> : Section Plane + Parallel Projection + Shadows</li>
+  <li><strong>Export</strong> : PNG haute resolution pour l'appel d'offres</li>
+</ul>
+
+<div class="footer">
+  <p>Faucon PTR — Guide de modelisation SketchUp | <a href="plan-irm.html">Plan 2D</a> | <a href="plan-irm-3d.html">Vue 3D interactive</a></p>
+</div>
+
+</div>
+</body>
+</html>
